@@ -1,72 +1,46 @@
-# Requirement
-A cash register (POS) system is used in the store for settlement of the store. This cashier will settle and print the receipt (Receipt) according to the item(Item) in the customer's shopping cart (Cart) at the time of settlement.
 
-We need to implement a function called printReceipt, which can input the data of the specified format as a parameter and then output the text of the receipt in the browser console.
+tasking:
+1.获取各个商品的数量
+输入：barcodes[]:String
+输出：itemsBarcodes[]:Object
 
-This time, the input will be an array of barcodes (string). For example:
-```javascript
-[
-  'ITEM000000',
-  'ITEM000000',
-  'ITEM000000',
-  'ITEM000000',
-  'ITEM000000',
-  'ITEM000001',
-  'ITEM000001',
-  'ITEM000004'
-]
-```
+2.获取各个商品的信息
+输入：itemBarcode:Object
+输出：itemBarcodesDetials:Object
 
-Then the output should be 
-```
-***<store earning no money>Receipt ***
-Name: Coca-Cola, Quantity: 5, Unit price: 3 (yuan), Subtotal: 15 (yuan)
-Name: Sprite, Quantity: 2, Unit price: 3 (yuan), Subtotal: 6 (yuan)
-Name: Battery, Quantity: 1, Unit price: 2 (yuan), Subtotal: 2 (yuan)
-----------------------
-Total: 23 (yuan)
-**********************
-```
+3.获得所有商品的完整信息
+输入：itemsBarcodes[]:Object
+输出：itemsBarcodesDetialsTotal[]:Object
 
-Suppose that our database is as follows:
-```javascript
-[
-   {
-      barcode: 'ITEM000000',
-      name: 'Coca-Cola',
-      price: 3
-    },
-    {
-      barcode: 'ITEM000001',
-      name: 'Sprite',
-      price: 3
-    },
-    {
-      barcode: 'ITEM000002',
-      name: 'Apple',
-      price: 5
-    },
-    {
-      barcode: 'ITEM000003',
-      name: 'Litchi',
-      price: 15
-    },
-    {
-      barcode: 'ITEM000004',
-      name: 'Battery',
-      price: 2
-    },
-    {
-      barcode: 'ITEM000005',
-      name: 'Instant Noodles',
-      price: 4
-    }
-]
-```
+4.格式化商品的数据信息
+输入：itemsBarcodesDetialsTotal[]:Object
+输出：infoStringArray[] :String
 
-# Principal
+5.输出需要的Receipt 
 
-1. Please draw context diagram.
-2. Please declare all the methods according to your diagram.
-3. Please implement the function according to the context diagram
-4. Please repeat step 3 until all functions are implemented.
+
+PDCA
+P       任务1     8min
+D       任务1     10min
+C      对于数组去重和计数，还不是特别熟练，出现了语法错误，所以超时。
+A       多做多练习，提高编程水平。
+
+P       任务2     5min
+D       任务2     5min
+C      对于对象数组的概念不牢固
+A     多练习，提高编码的准确度与速度
+
+P       任务3     5min
+D       任务3     5min
+C      
+A     多练习，提高编码的准确度与速度
+
+P       任务4     5min
+D       任务4     6min
+C       注意比对需求所要求的格式，出现了粗心的拼写错误。
+A      多练习，提高编码的准确度与速度
+
+P       任务5     10min
+D       任务5     5min
+C      最后整合调用函数的时候，思路清晰了，还是很简单的
+A      多利用任务分解的方法和上下文图去实践编程
